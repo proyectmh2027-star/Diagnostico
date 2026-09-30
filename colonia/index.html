@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0B6E5F">
+  <title>Necesidades de la colonia</title>
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📋</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/estilos.css">
+</head>
+<body data-tipo="colonia">
+  <div class="barra">
+    <div class="barra-in"><b id="barraTitulo"></b><small id="barraAvance">0 de 0</small></div>
+    <div class="progreso"><i id="barraProgreso"></i></div>
+  </div>
+
+  <main id="app">
+    <h1 id="titulo"></h1>
+    <p class="sub" id="subtitulo"></p>
+
+    <div class="aviso">
+      <p>Lea en voz alta: “Esta encuesta es voluntaria y anónima. Sus respuestas se usarán sólo para conocer las necesidades de su colonia y se reportarán de forma agregada. Puede saltar cualquier pregunta o terminar cuando quiera. Si desea que le contactemos, le pediremos un teléfono al final, que se guardará por separado.”</p>
+      <label class="check"><input type="checkbox" id="consentimiento"> La persona escuchó el aviso y acepta participar</label>
+    </div>
+
+    <h2><span>0</span>Ubicación</h2>
+    <div class="q">
+      <label for="aplicador">Quién aplica</label>
+      <input type="text" id="aplicador" autocomplete="name" placeholder="Tu nombre">
+    </div>
+    <div class="q">
+      <label for="seccion">Sección electoral</label>
+      <input type="number" id="seccion" inputmode="numeric" placeholder="Ej. 1234">
+    </div>
+    <div class="q">
+      <span class="et">Colonia</span>
+      <div class="colonia" id="coloniaCaja">
+        <div class="nom" id="coloniaNom">Buscando ubicación…</div>
+        <div class="meta" id="coloniaMeta">Permite el acceso a la ubicación para detectarla sola.</div>
+        <div class="acciones">
+          <button type="button" class="link" id="btnGps">Detectar de nuevo</button>
+          <button type="button" class="link" id="btnBuscar">Elegir de la lista</button>
+        </div>
+        <div id="buscador" hidden>
+          <input type="search" id="busca" placeholder="Escribe el nombre de la colonia" autocomplete="off" style="margin-top:10px">
+          <div class="resultados" id="resultados"></div>
+        </div>
+      </div>
+    </div>
+    <div id="extras"></div>
+
+    <div id="secciones"></div>
+  </main>
+
+  <div class="pie"><div class="pie-in">
+    <span class="pend" id="pendientes"></span>
+    <button type="button" class="btn" id="btnEnviar">Guardar respuesta</button>
+  </div></div>
+
+  <script src="../assets/config.js"></script>
+  <script src="../assets/esquemas.js"></script>
+  <script src="../assets/colonias.js"></script>
+  <script src="../assets/app.js"></script>
+</body>
+</html>
