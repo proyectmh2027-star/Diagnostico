@@ -1,0 +1,9 @@
+{
+  "name": "Diagnóstico de necesidades",
+  "short_name": "Diagnóstico",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0B6E5F",
+  "lang": "es-MX"
+}
